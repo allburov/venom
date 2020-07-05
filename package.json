@@ -17,7 +17,8 @@
     "clean": "rm -rf session && rm -rf dist",
     "test": "echo \"No tests yet\"",
     "changelog": "auto-changelog -p && git add CHANGELOG.md",
-    "release": "read -p 'GITHUB_TOKEN: ' GITHUB_TOKEN && export GITHUB_TOKEN=$GITHUB_TOKEN && release-it"
+    "release": "read -p 'GITHUB_TOKEN: ' GITHUB_TOKEN && export GITHUB_TOKEN=$GITHUB_TOKEN && release-it",
+    "postinstall": "tsc --outDir ./build"
   },
   "release-it": {
     "github": {
